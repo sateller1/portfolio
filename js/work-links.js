@@ -2,7 +2,6 @@
  * Remaining work slots — add URLs as you collect more assets.
  */
 export const workLinks = {
-  uva: { url: "" },
   video: { url: "" },
 };
 
