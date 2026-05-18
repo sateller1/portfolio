@@ -765,15 +765,51 @@ main {
 }
 
 .contact-inner {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: center;
   padding: var(--space-lg);
   border-radius: calc(var(--radius) * 1.5);
   background: var(--bg-elevated);
   border: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.contact-inner p {
+@media (min-width: 720px) {
+  .contact-inner {
+    grid-template-columns: 1fr minmax(12rem, 16rem);
+  }
+}
+
+.contact-content p {
   color: var(--text-muted);
   max-width: 42ch;
+}
+
+.contact-photo {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  max-height: 22rem;
+  justify-self: center;
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .contact-photo {
+    max-height: none;
+    height: 100%;
+    min-height: 18rem;
+    justify-self: end;
+  }
+}
+
+.contact-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .contact-email {
