@@ -278,6 +278,13 @@ main {
   margin-bottom: 0.375rem;
 }
 
+.metric-value--text {
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
 .metric-label {
   font-size: 0.9375rem;
   color: var(--text-muted);
